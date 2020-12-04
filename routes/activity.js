@@ -109,7 +109,7 @@ exports.execute = function (req, res) {
           .create({ 
              body: body,
              from: '+14156920451',
-             to: '+91' +  to
+             to: '+1' +  to
            }) 
           .then(message => console.log(message.sid)) 
           .done();
