@@ -93,7 +93,7 @@ exports.execute = function (req, res) {
     console.log("3");	
     console.log("2");	
     console.log("1");	
-    //console.log("Executed: "+req.body.inArguments[0]);
+    console.log("Executed: " + JSON.stringify(req.body.inArguments[0]));
     
     var requestBody = req.body.inArguments[0];
 
@@ -108,8 +108,8 @@ exports.execute = function (req, res) {
     client.messages 
           .create({ 
              body: body,
-             messagingService: messagingService,
-             to: to
+             from: '+12059460577',
+             to: '+91' +  to
            }) 
           .then(message => console.log(message.sid)) 
           .done();
@@ -158,8 +158,8 @@ exports.publish = function (req, res) {
     
     // Data from the req and put it in an array accessible to the main app.
     //console.log( req.body );
-//     logData(req);
-//     res.send(200, 'Publish');
+     logData(req);
+     res.send(200, 'Publish');
 };
 
 /*
